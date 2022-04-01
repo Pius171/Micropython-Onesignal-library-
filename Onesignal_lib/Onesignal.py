@@ -1,6 +1,4 @@
-#app id
-# api key
-# language
+
 
 try:
     import requests
@@ -21,7 +19,7 @@ class  Messenger():
 # Notifier inherits the class Messenger
 class Notifier(Messenger):
     def __init__(self, __app_id,__api_key,__language="en"):
-        Messenger.__init__(self, __app_id,__api_key,__language="en")
+        Messenger.__init__(self, __app_id,__api_key,__language)
     
     
     def notify_segment(self,segment,message):
@@ -52,7 +50,7 @@ class Notifier(Messenger):
         
 class SMS_Messenger(Messenger):
     def __init__(self, __app_id,__api_key,__sender,__name,__language="en"):
-        Messenger.__init__(self, __app_id,__api_key,__language="en")
+        Messenger.__init__(self, __app_id,__api_key,__language)
         self.sender=__sender #sender's phone number
         self.name=__name #sender's name
         
@@ -71,6 +69,27 @@ class SMS_Messenger(Messenger):
  
         print(req.status_code, req.reason)
         print(req.text)
+
+class Mailer(Messenger):
+    def __init__(self, __app_id,__api_key,__language="en"):
+        Messenger.__init__(self, __app_id,__api_key,__language)
+
+    def send_mail(self,subject,body,player_id):
+        payload = {
+            "app_id": self.app_id,
+           "include_player_ids": [player_id],
+           "email_subject": subject,
+           "email_body": body 
+           }
+        req = requests.post("https://onesignal.com/api/v1/notifications", headers=self.header, data=json.dumps(payload))
+ 
+        print(req.status_code, req.reason)
+        print(req.text)
+
+
+
+
+
        
         
         
