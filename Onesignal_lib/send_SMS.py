@@ -1,7 +1,7 @@
 from Onesignal import  SMS_Messenger
-messenger =SMS_Messenger ("4be64729-ab93-4fac-8e41-fd124b8bc880",
-                          "ODgzM2IyODMtNzQ1NC00M2VlLThlNjktODMzY2Y5ZTkyNDE2",
-                          ["+13512473112"],
+messenger =SMS_Messenger ("app id",
+                          "api key",
+                          ["Twilo phone number"],
                           "Pius",
                           "en"
                           )
