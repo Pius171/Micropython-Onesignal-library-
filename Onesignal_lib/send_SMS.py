@@ -6,4 +6,4 @@ messenger =SMS_Messenger ("app id",
                           "en"
                           )
 
-messenger.send_text("Hello",["+2349056149453"]) #make sure phone number is added to your onesignal subcribers##
+messenger.send_text("Hello",["recepient phone number"]) #make sure phone number is added to your onesignal subcribers##
