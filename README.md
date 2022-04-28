@@ -6,6 +6,7 @@ This library is compatible with both python and micropython interpreters
 ## DISCLAIMER
  This is the first python library I have created but I have tested everything, feel free to make pull requests and raise issuse when you see something wierd.
  
+ ## About the project
 I learnt python a few years back, I just couldn’t find anything to do with it. Funny right? There are a lot of things you can do with python, but I am especially particular about python in hardware and I do not have a raspberry pi computer laying around (their prices have been increasing lately). Then I found out about micropython, which allows me to write python code for low memory devices such as Espressif ESP8266 and ESP32 (they are my favourite boards, leave your favourite board in the comment section so I can check them out). Then boom! my micropython journey started, after some months of polishing my python skills, I decided to put it to the test by building a library for Onesignal services, which I use a lot. A noob as I am, I desperately searched for a OneSignal library for the Arduino framework but couldn’t find one, so I had to learn to make requests with Arduino, which gave me a lot of experience in making requests, python is relatively easy to write so I decided to create the library for micropython as a way to give back to the embedded community. I plan on writing one for Arduino in nearest future.
 
 ## Installing the library
